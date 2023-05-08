@@ -5,7 +5,7 @@ const SignUp = () => {
         <div className='mx-5'>
 
         <div className='flex_center flex-col form_container mx-auto'>
-            <form className='flex_start flex-col sticky' id='sign_up_form'>
+            <form className='flex_start flex-col' id='sign_up_form'>
             <h1 className='form_heading self-center'>MediCare</h1>
                 <div>
                     <label for="first-name">First Name:</label>

@@ -5,7 +5,7 @@ import '@styles/globals.css'
 const page = () => {
   return (
     <div>
-      <SignUp />
+      
     </div>
   )
 }

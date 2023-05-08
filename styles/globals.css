@@ -8,6 +8,18 @@
     box-sizing: border-box;
 }
 
+.main{
+    margin: 0;
+    inset: 0;
+    position: fixed;
+    min-width: 100vw;
+    min-height: 100vh;
+    background-image: radial-gradient(
+        transparent 0,
+        rgb(247, 243, 244) 100%
+    );
+}
+
 label {
     font-weight: bold;
     width: 100px;
@@ -32,7 +44,7 @@ textarea {
 }
 
 .form_container{
-    @apply max-w-xl border-[1px] border-[#ccc] border-solid my-6 py-6 shadow-lg rounded-2xl relative
+    @apply max-w-xl border-[1px] border-[#ccc] border-solid my-6 py-6 shadow-lg rounded-2xl relative bg-white
 }
 
 .form_heading{
@@ -56,6 +68,21 @@ input[type="submit"] {
     @apply flex items-start justify-center;
 }
 
+.flex_between{
+    @apply flex justify-between items-center
+}
+
+.box{
+    @apply px-8 py-3 sm:px-12
+}
+
+.box_size{
+    max-width: 1400px;
+}
+
+.outline_btn{
+    @apply rounded-full py-[6px] px-5 border border-solid border-black cursor-pointer font-semibold hover:bg-black hover:text-white transition-all
+}
 
 @media screen and (max-width: 450px) {
     #sign_up_form > div{
