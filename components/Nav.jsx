@@ -3,31 +3,27 @@ import Link from "next/link"
 
 const Nav = () => {
   return (
-    <nav className="flex items-center justify-between ">
-        <span className="flex_center">
+<nav className="flex items-center">
         <Image
             src="/assets/logo.png"
             width={40}
             height={40}
             className="object-contain"
         />
-        MediCare
-        </span>
-        <div className="flex_center gap-4">
+        <h3 className="mr-auto">MediCare</h3>
+        
             <Image
                 src="/assets/logo.png"
                 width={58}
                 height={58}
-                className="rounded-full cursor-pointer"
+                className="rounded-full cursor-pointer ml-auto"
             />
             <Link
                 href="/"
-                className="outline_btn"
+                className="outline_btn ml-4"
             >
                 Sign Out
             </Link>
-        </div>
-
     </nav>
   )
 }
