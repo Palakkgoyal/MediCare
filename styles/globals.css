@@ -8,6 +8,7 @@
     box-sizing: border-box;
 }
 
+/* For main layout bg  */
 .main{
     margin: 0;
     inset: 0;
@@ -20,6 +21,8 @@
     );
 }
 
+
+/* For sign up form  */
 label {
     font-weight: bold;
     width: 100px;
@@ -60,6 +63,65 @@ input[type="submit"] {
     @apply bg-[#4CAF50] text-white px-14 py-2 border-none rounded-full cursor-pointer text-lg transition-all self-center hover:bg-[#3e8e41];
 }
 
+@media screen and (max-width: 500px) {
+    #sign_up_form > div{
+        flex-direction: column;
+    }
+
+    #sign_up_form > :nth-last-child(2){
+        flex-direction: row;
+    }
+    label{
+        margin: 0;
+    }
+    input[type="text"],
+    textarea {
+    margin-top: 0;
+    width: 200px;
+}
+  }
+
+  #weight.number_input, #age.number_input{
+    @apply my-0 flex-row md:my-3
+  }
+
+/* Hero Component */
+.hero_container{
+    background: linear-gradient(
+        rgb(178, 178, 201),
+        transparent
+    );
+    border-radius: 20px;
+}
+
+.hero_img_clip{
+    -webkit-clip-path: polygon(100% 100%, 100% 0, 30% 0, 0 100%);
+    clip-path: polygon(100% 100%, 100% 0, 30% 0, 0 100%);
+}
+.hero_img{
+    border-radius: inherit;
+    mask-image: linear-gradient(
+        black 10%,
+        rgba(0,0,0,0.5) 90%,
+        transparent
+    );
+}
+
+.hero_text{
+    text-align: center;
+    flex: auto;
+}
+
+.hero_text > h1{
+ @apply text-2xl sm:text-3xl md:text-4xl mt-9 md:mt-5 lg:mt-20 font-bold m-auto leading-snug max-w-[550px] whitespace-nowrap 
+}
+
+.hero_text > p{
+    @apply text-[10px] sm:text-sm sm:mt-4 lg:mt-0 font-semibold w-[30ch] lg:w-[50ch] m-auto lg:text-gray-600 lg:text-base
+}
+
+  /* Utility classes */
+
 .flex_center{
     @apply flex justify-center items-center;
 }
@@ -83,21 +145,3 @@ input[type="submit"] {
 .outline_btn{
     @apply rounded-full py-[6px] px-5 border border-solid border-black cursor-pointer font-semibold hover:bg-black hover:text-white transition-all
 }
-
-@media screen and (max-width: 450px) {
-    #sign_up_form > div{
-        flex-direction: column;
-    }
-
-    #sign_up_form > :nth-last-child(2){
-        flex-direction: row;
-    }
-    label{
-        margin: 0;
-    }
-    input[type="text"],
-    textarea {
-    margin-top: 0;
-    width: 200px;
-}
-  }

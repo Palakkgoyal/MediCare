@@ -8,6 +8,7 @@ const Nav = () => {
             src="/assets/logo.png"
             width={40}
             height={40}
+            alt="Medicare Logo"
             className="object-contain"
         />
         <h3 className="mr-auto">MediCare</h3>
@@ -16,6 +17,7 @@ const Nav = () => {
                 src="/assets/logo.png"
                 width={58}
                 height={58}
+                alt="Profile Picture"
                 className="rounded-full cursor-pointer ml-auto"
             />
             <Link
