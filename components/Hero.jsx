@@ -2,7 +2,7 @@ import Image from "next/image"
 
 const Hero = () => {
   return (
-    <>
+    <header>
         <div className="hidden lg:flex justify-between hero_container">
             <div className="hero_text">
                 <h1 className="">Transform your health <br/>with Medicare</h1>
@@ -29,7 +29,7 @@ const Hero = () => {
                 className="hero_img absolute -z-[1] inset-0 object-cover right-0 w-full  h-72"
         />
         </div>
-    </>
+    </header>
   )
 }
 
