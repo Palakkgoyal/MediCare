@@ -1,9 +1,11 @@
-import React from 'react'
+import Result from "@components/Result"
+import BackToHome from "@styles/BackToHome"
 
 const page = () => {
   return (
     <div>
-      Page
+      <Result />
+      <BackToHome/>
     </div>
   )
 }

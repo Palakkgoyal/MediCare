@@ -142,7 +142,7 @@ input[type="submit"] {
 }
 
 .box{
-    @apply py-3 md:px-10
+    @apply px-6 py-3 md:px-10
 }
 
 .box_size{
