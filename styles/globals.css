@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -6,7 +9,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: inter;
 }
+
+/* html{
+    color-scheme: white black;
+} */
 
 /* For main layout bg  */
 .main{
@@ -40,8 +48,7 @@ label {
     margin-block: 15px;
 }
 
-input[type="text"],
-textarea {
+.signUpInput {
     border: none;
     border-bottom: 1px solid #ccc;
 }
@@ -117,7 +124,7 @@ input[type="submit"] {
 }
 
 .hero_text > p{
-    @apply text-[10px] sm:text-sm sm:mt-4 lg:mt-0 font-semibold w-[30ch] lg:w-[50ch] m-auto lg:text-gray-600 lg:text-base
+    @apply text-[10px] sm:text-sm sm:mt-4 lg:mt-0 font-semibold w-[30ch] m-auto lg:text-gray-600 lg:text-base
 }
 
   /* Utility classes */
@@ -135,7 +142,7 @@ input[type="submit"] {
 }
 
 .box{
-    @apply px-8 py-3 sm:px-12
+    @apply py-3 md:px-10
 }
 
 .box_size{

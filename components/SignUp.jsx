@@ -39,16 +39,16 @@ const handleSubmit = (event) => {
 
             <div className='flex_center flex-col form_container mx-auto'>
                 <form 
-                    className='flex_start flex-col' 
+                    className={`flex_start flex-col`} 
                     id='sign_up_form'
                     onSubmit={handleSubmit}
                 >
-                <h1 
-                    className='form_heading self-center'>MediCare</h1>
+                <h1 className='form_heading self-center'>MediCare</h1>
                     <div>
                         <label htmlFor="firstName">First Name:</label>
                         <input 
                             type="text" 
+                            className="signUpInput"
                             id="firstName" 
                             name="firstName" 
                             placeholder="First Name" required 
@@ -61,6 +61,7 @@ const handleSubmit = (event) => {
                         <label htmlFor="lastName">Last Name:</label>
                         <input 
                             type="text" 
+                            className="signUpInput"
                             id="lastName" 
                             name="lastName" 
                             placeholder="Last Name" 
@@ -74,6 +75,7 @@ const handleSubmit = (event) => {
                         <label htmlFor="weight" className="my-0">Weight in Kg:</label>
                         <input 
                             type="number" 
+                            className="signUpInput"
                             id="weight" 
                             name="weight" min={10} 
                             max={250} 
@@ -91,7 +93,7 @@ const handleSubmit = (event) => {
                             min={10} 
                             max={101} 
                             required 
-                            className=' w-200px'
+                            className='signUpInput w-200px'
                             onChange={handleChange}
                             value={formData.age}
                         />

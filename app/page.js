@@ -13,7 +13,7 @@ const page = () => {
 
   return (
     <div className='relative'>
-      <button onClick={fetchData}>Report</button>
+      {/* <button onClick={fetchData}>Report</button> */}
       <SignUp />
       <Hero />
       <Greeting />

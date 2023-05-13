@@ -1,0 +1,108 @@
+
+.main_container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 200px;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    width: 100%;
+}
+
+.sub_container{
+    display: flex;
+    width: 60%;
+    flex-direction: column;
+}
+
+.img{
+    margin-left: auto;
+}
+
+.health_label{
+    font-size: 30px;
+    width: 200px;
+    align-self: flex-start;
+    font-family: satoshi;
+}
+
+.health_form{
+    display: flex;
+}
+
+.health_input{
+    border: 1px solid black;
+    border-radius: 8px;
+    flex: 1;
+}
+
+.check_btn{
+    border: 2px solid gray;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    height: 50px;
+    margin-block: auto;
+    padding: 10px 50px;
+    border-radius: 10px;
+    margin-left: 70px;
+    background: radial-gradient(rgb(112, 112, 184), rgb(191, 184, 184));
+}
+
+@media screen and (max-width: 800px) {
+    .main_container{
+        margin-top: 100px;
+    }
+    .container{
+        margin-top: 20px;
+        flex-direction: column;
+        height: auto;
+    }
+
+    .sub_container{
+        width: auto;
+    }
+    .img{
+        margin: auto;
+    }
+}
+@media screen and (max-width: 560px){
+    .health_label{
+        font-size: 25px;
+    }
+
+    .health_form{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 5px;
+        gap: 15px;
+    }
+
+    .health_input{
+        width: 100%;
+        min-width: 300px;
+    }
+    .check_btn{
+        margin: auto;
+        min-width: 300px;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .health_input{
+        width: 100%;
+        min-width: 250px;
+    }
+    .check_btn{
+        min-width: 250px;
+    }
+}
