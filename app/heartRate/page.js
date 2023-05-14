@@ -1,4 +1,5 @@
 'use client'
+
 import Result from "@components/Result"
 
 const page = () => {
@@ -11,6 +12,7 @@ const page = () => {
 }
 
 export default page
+
 
 async function fetchData(){
 

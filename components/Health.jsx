@@ -48,7 +48,9 @@ const handleSubmit = (event) => {
                             type="text" 
                             name="bloodPressure" 
                             id="bloodPressure" 
-                        className={`${styles.health_input}`} />
+                            className={`${styles.health_input}`} 
+                            required
+                        />
                         <button  onClick={handleSubmit}>
                             <Link href={{ pathname: '/bloodPressure', query: { keyword: 'blood-pressure' } }}
                                 className={`${styles.check_btn}`}>
@@ -79,10 +81,12 @@ const handleSubmit = (event) => {
                             type="text" 
                             name="heartRate" 
                             id="heartRate" 
-                            className={`${styles.health_input}`} />
+                            className={`${styles.health_input}`} 
+                            required
+                            />
                             <button onClick={handleSubmit}>
                                 <Link
-                                    href="/health"
+                                    href="/heartRate"
                                     className={`${styles.check_btn}`}>
                                     Check
                                 </Link>
@@ -112,10 +116,12 @@ const handleSubmit = (event) => {
                             type="text" 
                             name="sugarLevel" 
                             id="sugarLevel" 
-                            className={`${styles.health_input}`} />
+                            className={`${styles.health_input}`} 
+                            required
+                            />
                             <button onClick={handleSubmit}>
                                 <Link
-                                    href="/health"
+                                    href="/sugarLevel"
                                     className={`${styles.check_btn}`}>
                                     Check
                                 </Link>
