@@ -6,6 +6,7 @@ import '@styles/globals.css'
 import Hero from '@components/Hero'
 import Health from '@components/Health'
 import Greeting from '@components/Greeting'
+import Instructions from '@components/Instructions'
 import fetchData from './api/user'
 
 
@@ -13,10 +14,10 @@ const page = () => {
 
   return (
     <div className='relative'>
-      {/* <button onClick={fetchData}>Report</button> */}
       <SignUp />
       <Hero />
       <Greeting />
+      <Instructions />
       <Health />
     </div>
   )

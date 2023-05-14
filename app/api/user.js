@@ -1,7 +1,6 @@
-console.log(process.env.OPENAI_KEY)
-
 export default async function fetchData(){
-  const res = await fetch("https://api.openai.com/v1/chat/completions", {
+
+  const response = await fetch("https://api.openai.com/v1/chat/completions", {
       method: "POST",
       headers: {
           Authorization: `Bearer ${process.env.OPENAI_KEY}`,
@@ -13,10 +12,10 @@ export default async function fetchData(){
       })
   })
 
-  if (!res.ok) {
+  if (!response.ok) {
     throw new Error("Failed to fetch data");
   }
 
-  const data = await res.json()
-  console.log(data)
+  const data = await response.json()
+  return data;
 }

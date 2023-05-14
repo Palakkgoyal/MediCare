@@ -1,0 +1,28 @@
+.container{
+    margin-top: 50px;
+    padding: 20px;
+    border-radius: 8px;
+    background: linear-gradient(
+        to bottom right,
+        black,
+        rgb(97, 96, 96),
+        black
+    );
+    color: white;
+}
+
+.heading{
+    font-size: 20px;
+    text-decoration: underline;
+    margin-bottom: 8px;
+}
+
+.warning{
+    color: yellow
+}
+
+@media screen and (max-width: 400px) {
+    .para{
+        font-size: 14px;
+    }
+}

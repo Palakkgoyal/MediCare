@@ -1,8 +1,35 @@
 import Image from "next/image"
 import styles from "@styles/health.module.css"
 import Link from "next/link"
+import { useState } from "react"
 
 const Health = () => {
+    const [formData, setFormData] = useState({
+        bloodPressure: "",
+        heartRate: "",
+        sugarLevel: ""
+    })
+
+    console.log(formData)
+    
+    const handleChange = (event) => {
+        const {name, value} = event.target;
+       setFormData((prevFormData) => {
+        return {
+            ...prevFormData,
+            [name]: value
+        }
+    })
+}
+
+const handleSubmit = (event) => {
+    event.preventDefault()
+    for(let i in formData){
+        localStorage.setItem(i, formData[i])
+    }
+
+ }
+
 
     return (
         <main className={`${styles.main_container}`}>
@@ -16,11 +43,18 @@ const Health = () => {
                         </label>
                     </span>
                     <form className={`${styles.health_form}`}>
-                        <input type="text" name="bloodPressure" id="bloodPressure" className={`${styles.health_input}`} />
-                        <Link href="/health"
-                            className={`${styles.check_btn}`}>
-                            Check
-                        </Link>
+                        <input 
+                            onChange={handleChange}
+                            type="text" 
+                            name="bloodPressure" 
+                            id="bloodPressure" 
+                        className={`${styles.health_input}`} />
+                        <button  onClick={handleSubmit}>
+                            <Link href={{ pathname: '/bloodPressure', query: { keyword: 'blood-pressure' } }}
+                                className={`${styles.check_btn}`}>
+                                Check
+                            </Link>
+                        </button>
                     </form>
                 </div>
                 <Image
@@ -40,12 +74,20 @@ const Health = () => {
                         </label>
                     </span>
                     <form className={`${styles.health_form}`}>
-                        <input type="text" name="heartRate" id="heartRate" className={`${styles.health_input}`} />
-                        <Link
-                            href="/health"
-                            className={`${styles.check_btn}`}>
-                            Check
-                        </Link>
+                        <input 
+                            onChange={handleChange}
+                            type="text" 
+                            name="heartRate" 
+                            id="heartRate" 
+                            className={`${styles.health_input}`} />
+                            <button onClick={handleSubmit}>
+                                <Link
+                                    href="/health"
+                                    className={`${styles.check_btn}`}>
+                                    Check
+                                </Link>
+
+                            </button>
                     </form>
                 </div>
                 <Image
@@ -65,12 +107,19 @@ const Health = () => {
                         </label>
                     </span>
                     <form className={`${styles.health_form}`}>
-                        <input type="text" name="sugarLevel" id="sugarLevel" className={`${styles.health_input}`} />
-                        <Link
-                            href="/health"
-                            className={`${styles.check_btn}`}>
-                            Check
-                        </Link>
+                        <input 
+                            onChange={handleChange}
+                            type="text" 
+                            name="sugarLevel" 
+                            id="sugarLevel" 
+                            className={`${styles.health_input}`} />
+                            <button onClick={handleSubmit}>
+                                <Link
+                                    href="/health"
+                                    className={`${styles.check_btn}`}>
+                                    Check
+                                </Link>
+                            </button>
                     </form>
                 </div>
                 <Image

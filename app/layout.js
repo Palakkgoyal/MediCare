@@ -1,6 +1,7 @@
 import Nav from "@components/Nav"
 import Footer from "@components/Footer";
 import "@styles/globals.css";
+import Follow from "@components/Follow";
 
 export const metadata = {
   title: 'Medicare - Your one stop partner for health',
@@ -16,13 +17,14 @@ export default function RootLayout({ children }) {
         </div>
 
 
-        <div className="z-10 box_size mx-auto relative">
+        <div className="z-10 box_size mx-auto relative min-h-[100vh] flex justify-between flex-col">
           <div className="w-full box">
             <Nav />
             {children}
+            <Follow />
           </div>
-        </div>
             <Footer/>
+        </div>
       </body>
     </html>
   )

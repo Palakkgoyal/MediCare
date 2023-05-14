@@ -1,0 +1,30 @@
+.container{
+    /* border: 1px solid red; */
+    margin-bottom: 25px;
+}
+
+.sub_container{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.heading{
+    font-size: 30px;
+    font-weight: 800;
+    color: blue;
+}
+
+.tag{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    transition: transform 600ms;
+}
+
+.tag:hover{
+    text-decoration: underline;
+    transform: translateY(-0.3rem);
+}
