@@ -7,10 +7,10 @@ const layout = ({children}) => {
       <div>
         <div className={`${styles.gradient}`}></div>
       </div>
- 
+
         {children}
     </div>
   )
 }
 
-export default layout
+export default layout;

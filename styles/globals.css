@@ -67,7 +67,21 @@ textarea{
 }
 
 input[type="submit"] {
-    @apply bg-[#4CAF50] text-white px-14 py-2 border-none rounded-full cursor-pointer text-lg transition-all self-center hover:bg-[#3e8e41];
+    background: linear-gradient(
+        blue,
+        gray
+    );
+}
+
+input[type="submit"]:hover {
+    background: linear-gradient(
+        rgb(11, 11, 229),
+        rgb(100, 83, 83)
+    );
+}
+
+input[type="submit"] {
+    @apply text-white px-14 py-2 border-none rounded-full cursor-pointer text-lg transition-all self-center hover:bg-[#3e8e41];
 }
 
 @media screen and (max-width: 500px) {

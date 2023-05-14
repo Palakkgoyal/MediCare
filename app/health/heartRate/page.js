@@ -1,12 +1,13 @@
 'use client'
-
 import Result from "@components/Result"
+
+const prompt = `Is it ok for a ${localStorage.getItem("gender")} who is ${localStorage.getItem("age")} years old to have a 'heart beat rate' of '${localStorage.getItem('heartRate')} per minute'. If not give some instructions on how to improve it.(About 100 words)`
+const report = fetchData()
 
 const page = () => {
   return (
     <div>
-       <button onClick={fetchData}>Report</button>
-      <Result />
+      <Result report={report} />
     </div>
   )
 }
@@ -24,7 +25,7 @@ async function fetchData(){
       },
       body: JSON.stringify({
           model: "gpt-3.5-turbo",
-          "messages": [{"role": "user", "content": "Is it ok for a female who is 19 years old to have a 'blood pressure' of '120/90'. If not give some instructions on how to improve it.(About 100 words)"}]
+          "messages": [{"role": "user", "content": prompt}]
       })
   })
 
@@ -33,6 +34,5 @@ async function fetchData(){
   }
 
   const data = await response.json()
-  console.log(data)
-  return data;
+  return data.choices[0].message.content;
 }

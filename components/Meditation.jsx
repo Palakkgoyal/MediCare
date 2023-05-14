@@ -3,19 +3,8 @@ import styles from '@styles/meditation.module.css'
 const Meditation = () => {
   return (
     <div className={`${styles.container}`}>
-        <h1>Meditate here</h1>
-        <div className={`${styles.level_container}`}>
-            <span className={`${styles.level}`}>1</span>
-            <span className={`${styles.level}`}>2</span>
-            <span className={`${styles.level}`}>3</span>
-            <span className={`${styles.level}`}>4</span>
-            <span className={`${styles.level}`}>5</span>
-            <span className={`${styles.level}`}>6</span>
-            <span className={`${styles.level}`}>7</span>
-            <span className={`${styles.level}`}>8</span>
-            <span className={`${styles.level}`}>9</span>
-            <span className={`${styles.level}`}>10</span>
-        </div>
+        <h1 className={`${styles.heading}`}>Meditate here</h1>
+        <iframe  className={`${styles.videoFrame}`} src="https://www.youtube.com/embed/DulNz2CkoHI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     </div>
   )
 }

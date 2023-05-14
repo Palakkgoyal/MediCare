@@ -5,9 +5,9 @@ import { useState } from "react"
 
 const Health = () => {
     const [formData, setFormData] = useState({
-        bloodPressure: "",
-        heartRate: "",
-        sugarLevel: ""
+        bloodPressure: "120/80",
+        heartRate: "72",
+        sugarLevel: "99"
     })
 
     console.log(formData)
@@ -48,11 +48,13 @@ const handleSubmit = (event) => {
                             type="text" 
                             name="bloodPressure" 
                             id="bloodPressure" 
+                            value={formData.bloodPressure}
                             className={`${styles.health_input}`} 
                             required
                         />
                         <button  onClick={handleSubmit}>
-                            <Link href={{ pathname: '/bloodPressure', query: { keyword: 'blood-pressure' } }}
+                            <Link 
+                                href="/health/bloodPressure"
                                 className={`${styles.check_btn}`}>
                                 Check
                             </Link>
@@ -80,13 +82,14 @@ const handleSubmit = (event) => {
                             onChange={handleChange}
                             type="text" 
                             name="heartRate" 
+                            value={formData.heartRate}
                             id="heartRate" 
                             className={`${styles.health_input}`} 
                             required
                             />
                             <button onClick={handleSubmit}>
                                 <Link
-                                    href="/heartRate"
+                                    href="/health/heartRate"
                                     className={`${styles.check_btn}`}>
                                     Check
                                 </Link>
@@ -115,13 +118,14 @@ const handleSubmit = (event) => {
                             onChange={handleChange}
                             type="text" 
                             name="sugarLevel" 
+                            value={formData.sugarLevel}
                             id="sugarLevel" 
                             className={`${styles.health_input}`} 
                             required
                             />
                             <button onClick={handleSubmit}>
                                 <Link
-                                    href="/sugarLevel"
+                                    href="/health/sugarLevel"
                                     className={`${styles.check_btn}`}>
                                     Check
                                 </Link>

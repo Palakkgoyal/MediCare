@@ -35,7 +35,7 @@ const handleSubmit = (event) => {
 
     return (
         <div className={`absolute w-full z-[9999] ${hiddenOrNot}`}>
-            <div className='mx-5'>
+            <div className='mx-5 card'>
 
             <div className='flex_center flex-col form_container mx-auto'>
                 <form 
@@ -44,6 +44,7 @@ const handleSubmit = (event) => {
                     onSubmit={handleSubmit}
                 >
                 <h1 className='form_heading self-center'>MediCare</h1>
+               
                     <div>
                         <label htmlFor="firstName">First Name:</label>
                         <input 
@@ -125,6 +126,15 @@ const handleSubmit = (event) => {
                             />
                         </span>
                     </div>
+                    {/* <div className="mb-4 flex-col md:flex-row md:items-center">
+                        <label htmlFor="img">Select an image:</label>
+                        <input 
+                            type="file" 
+                            id="file-input" 
+                            accept="image/*" 
+                            className="cursor-pointer flex"
+                        />
+                    </div> */}
 
                     <input type="submit" value="Submit" />
                 </form>
