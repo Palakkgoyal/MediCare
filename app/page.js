@@ -1,7 +1,6 @@
 "use client"
-import React from 'react'
-import SignUp from '@components/SignUp'
 import '@styles/globals.css'
+import SignUp from '@components/SignUp'
 import Hero from '@components/Hero'
 import Health from '@components/Health'
 import Greeting from '@components/Greeting'
