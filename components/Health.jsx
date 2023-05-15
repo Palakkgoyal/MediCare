@@ -48,6 +48,7 @@ const handleSubmit = (event) => {
                             type="text" 
                             name="bloodPressure" 
                             id="bloodPressure" 
+                            alt="a cute blood drop"
                             value={formData.bloodPressure}
                             className={`${styles.health_input}`} 
                             required
@@ -101,6 +102,7 @@ const handleSubmit = (event) => {
                     src='/assets/heart.png'
                     width={250}
                     height={250}
+                    alt="an adorable heart with a stethoscope"
                     className={`${styles.img}`}
                 />
             </div>
@@ -136,6 +138,7 @@ const handleSubmit = (event) => {
                     src='/assets/sugar.png'
                     width={300}
                     height={300}
+                    alt="an adorable white sugar cube"
                     className={`${styles.img}`}
                 />
             </div>
