@@ -24,6 +24,8 @@
 
 .img{
     margin-left: auto;
+    width: auto;
+    height: auto;
 }
 
 .health_label{

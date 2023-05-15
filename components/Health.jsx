@@ -9,8 +9,6 @@ const Health = () => {
         heartRate: "72",
         sugarLevel: "99"
     })
-
-    console.log(formData)
     
     const handleChange = (event) => {
         const {name, value} = event.target;
@@ -48,7 +46,6 @@ const handleSubmit = (event) => {
                             type="text" 
                             name="bloodPressure" 
                             id="bloodPressure" 
-                            alt="a cute blood drop"
                             value={formData.bloodPressure}
                             className={`${styles.health_input}`} 
                             required
@@ -66,6 +63,7 @@ const handleSubmit = (event) => {
                     src='/assets/blood.png'
                     width={300}
                     height={300}
+                    alt="a cute blood drop"
                     className={`${styles.img}`}
                 />
             </div>
